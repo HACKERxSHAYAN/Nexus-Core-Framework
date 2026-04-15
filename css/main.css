@@ -3,7 +3,7 @@
    High-Tech Cyber Aesthetic
    ================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 /* ================================================
    CSS VARIABLES - Design System
@@ -14,7 +14,7 @@
   --bg-tertiary: #1a1a25;
   --bg-card: #15151f;
   
-  --neon-cyan: #00f0ff;
+  --neon-cyan: #00f2ff;
   --neon-magenta: #ff00aa;
   --neon-purple: #8b5cf6;
   --neon-green: #00ff88;
@@ -27,11 +27,11 @@
   --border-color: #2a2a3a;
   --border-glow: rgba(0, 240, 255, 0.3);
   
-  --gradient-primary: linear-gradient(135deg, #00f0ff 0%, #8b5cf6 100%);
+  --gradient-primary: linear-gradient(135deg, #00f2ff 0%, #8b5cf6 100%);
   --gradient-dark: linear-gradient(180deg, #0a0a0f 0%, #12121a 100%);
   --gradient-card: linear-gradient(145deg, #15151f 0%, #12121a 100%);
   
-  --glow-cyan: 0 0 20px rgba(0, 240, 255, 0.5), 0 0 40px rgba(0, 240, 255, 0.3);
+  --glow-cyan: 0 0 20px rgba(0, 242, 255, 0.5), 0 0 40px rgba(0, 242, 255, 0.3);
   --glow-magenta: 0 0 20px rgba(255, 0, 170, 0.5), 0 0 40px rgba(255, 0, 170, 0.3);
   --glow-purple: 0 0 20px rgba(139, 92, 246, 0.5);
   
@@ -39,8 +39,8 @@
   --transition-medium: 0.3s ease;
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   
-  --font-heading: 'Orbitron', sans-serif;
-  --font-body: 'Rajdhani', sans-serif;
+  --font-heading: 'JetBrains Mono', monospace;
+  --font-body: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   
   --radius-sm: 4px;
@@ -136,7 +136,8 @@ input, textarea, select {
 /* ================================================
    TYPOGRAPHY
    ================================================ */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,
+.code-text, .nav-link {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
@@ -319,7 +320,7 @@ p {
 .delay-6 { transition-delay: 0.6s; }
 
 /* ================================================
-   HEADER & NAVIGATION
+   HEADER & NAVIGATION - Glassmorphism
    ================================================ */
 .header {
   position: fixed;
@@ -328,10 +329,11 @@ p {
   right: 0;
   z-index: 1000;
   padding: 1rem 0;
-  background: rgba(10, 10, 15, 0.8);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid transparent;
-  transition: all var(--transition-medium);
+  background: rgba(10, 10, 15, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
 
 .header.scrolled {
@@ -417,7 +419,7 @@ p {
 }
 
 /* ================================================
-   BUTTONS
+   BUTTONS - Glow Hover State
    ================================================ */
 .btn {
   display: inline-flex;
@@ -425,7 +427,7 @@ p {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.875rem 2rem;
-  font-family: var(--font-body);
+  font-family: var(--font-heading);
   font-weight: 600;
   font-size: 0.95rem;
   text-transform: uppercase;
@@ -444,7 +446,7 @@ p {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: var(--glow-cyan);
+  box-shadow: 0 0 30px rgba(0, 242, 255, 0.6), 0 0 60px rgba(0, 242, 255, 0.3);
 }
 
 .btn-secondary {
@@ -456,7 +458,7 @@ p {
 .btn-secondary:hover {
   background: var(--neon-cyan);
   color: var(--bg-primary);
-  box-shadow: var(--glow-cyan);
+  box-shadow: 0 0 30px rgba(0, 242, 255, 0.6), 0 0 60px rgba(0, 242, 255, 0.3);
 }
 
 .btn-ghost {
@@ -466,8 +468,9 @@ p {
 }
 
 .btn-ghost:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--neon-purple);
+  background: rgba(0, 242, 255, 0.1);
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 20px rgba(0, 242, 255, 0.3);
 }
 
 .btn-sm {
@@ -2206,4 +2209,282 @@ p {
 ::selection {
   background: var(--neon-cyan);
   color: var(--bg-primary);
+}
+
+/* ================================================
+   PROJECT METADATA FOOTER
+   ================================================ */
+.project-meta-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(10, 10, 15, 0.95);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid var(--border-color);
+  padding: 0.75rem 0;
+  z-index: 999;
+}
+
+.project-meta-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+}
+
+.meta-label {
+  color: var(--text-muted);
+}
+
+.meta-value {
+  color: var(--neon-cyan);
+}
+
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--neon-green);
+  border-radius: 50%;
+  animation: pulse-glow 2s infinite;
+}
+
+/* Adjust main content to account for fixed footer */
+body.has-meta-footer .footer {
+  padding-bottom: 3rem;
+}
+
+/* ================================================
+   MULTI-STEP CONSULTATION FORM
+   ================================================ */
+.consultation-form {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.form-steps {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.step-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.step-indicator.active {
+  color: var(--neon-cyan);
+}
+
+.step-indicator.completed {
+  color: var(--neon-green);
+}
+
+.step-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.step-indicator.active .step-number {
+  background: var(--neon-cyan);
+  color: var(--bg-primary);
+  border-color: var(--neon-cyan);
+}
+
+.step-indicator.completed .step-number {
+  background: var(--neon-green);
+  color: var(--bg-primary);
+  border-color: var(--neon-green);
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+  animation: fade-in-up 0.4s ease;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--neon-cyan);
+  box-shadow: 0 0 0 3px rgba(0, 242, 255, 0.1);
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2300f2ff' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
+  cursor: pointer;
+}
+
+.form-select option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.form-input.error,
+.form-textarea.error,
+.form-select.error {
+  border-color: var(--neon-magenta);
+}
+
+.form-error {
+  color: var(--neon-magenta);
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  display: none;
+}
+
+.form-error.show {
+  display: block;
+}
+
+.form-navigation {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn-prev {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color);
+}
+
+.btn-prev:hover {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+}
+
+.btn-next,
+.form-submit {
+  background: var(--gradient-primary);
+  color: var(--bg-primary);
+  border: none;
+}
+
+.btn-next:hover,
+.form-submit:hover {
+  box-shadow: 0 0 30px rgba(0, 242, 255, 0.6), 0 0 60px rgba(0, 242, 255, 0.3);
+}
+
+/* Progress Bar */
+.form-progress {
+  height: 4px;
+  background: var(--bg-tertiary);
+  border-radius: 2px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.form-progress-bar {
+  height: 100%;
+  background: var(--gradient-primary);
+  transition: width 0.4s ease;
+}
+
+/* Radio/Checkbox Cards */
+.radio-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.radio-card {
+  position: relative;
+}
+
+.radio-card input {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio-card label {
+  display: block;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.radio-card input:checked + label {
+  border-color: var(--neon-cyan);
+  background: rgba(0, 242, 255, 0.1);
+}
+
+.radio-card label:hover {
+  border-color: var(--neon-cyan);
 }

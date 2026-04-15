@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | NEXUS</title>
+  <title>Consultation Request | NEXUS-Gen Solutions</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 </head>
@@ -27,29 +27,29 @@
     </div>
   </header>
 
-  <section class="contact-hero">
+  <section class="contact-hero" style="padding-bottom: 6rem;">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-label">Contact</span>
-        <h1 class="section-title">Get In <span class="text-gradient">Touch</span></h1>
-        <p class="section-description">Have a project in mind? Let's create something amazing together.</p>
+        <span class="section-label">Consultation</span>
+        <h1 class="section-title">Request <span class="text-gradient">Engagement</span></h1>
+        <p class="section-description">Initiate deployment of Zero-Trust Architecture & Edge-Node Encryption solutions.</p>
       </div>
       <div class="contact-grid">
         <div class="contact-info reveal-left">
-          <h2>Let's <span class="text-gradient">Connect</span></h2>
-          <p>I'm always excited to discuss new projects, creative ideas, or opportunities to be part of your vision.</p>
+          <h2>Establish <span class="text-gradient">Connection</span></h2>
+          <p>Enterprise-grade consultation for security infrastructure, cloud architecture, and compliance frameworks.</p>
           <div class="contact-details">
             <div class="contact-item">
-              <div class="contact-icon">✉</div>
-              <div class="contact-text"><h4>Email</h4><p>hello@nexus.dev</p></div>
+              <div class="contact-icon">🔐</div>
+              <div class="contact-text"><h4>Secure Channel</h4><p>ops@nexus-gen.security</p></div>
             </div>
             <div class="contact-item">
-              <div class="contact-icon">📞</div>
-              <div class="contact-text"><h4>Phone</h4><p>+1 (555) 123-4567</p></div>
+              <div class="contact-icon">📡</div>
+              <div class="contact-text"><h4>Direct Line</h4><p>+1 (800) 555-SECU</p></div>
             </div>
             <div class="contact-item">
-              <div class="contact-icon">📍</div>
-              <div class="contact-text"><h4>Location</h4><p>San Francisco, CA</p></div>
+              <div class="contact-icon">🏢</div>
+              <div class="contact-text"><h4>Headquarters</h4><p>Fort Knox Industrial Complex</p></div>
             </div>
           </div>
           <div class="social-links">
@@ -59,46 +59,269 @@
             <a href="#" class="social-link">IG</a>
           </div>
         </div>
-        <div class="contact-form reveal-right">
-          <form id="contact-form">
-            <div class="form-group">
-              <label class="form-label" for="name">Name *</label>
-              <input type="text" id="name" class="form-input" placeholder="Your name" required>
-              <span class="form-error">Name must be at least 2 characters</span>
+        
+        <div class="consultation-form reveal-right">
+          <form id="consultation-form">
+            <div class="form-progress">
+              <div class="form-progress-bar" style="width: 33%;"></div>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="email">Email *</label>
-              <input type="email" id="email" class="form-input" placeholder="your@email.com" required>
-              <span class="form-error">Please enter a valid email</span>
+            
+            <div class="form-steps">
+              <div class="step-indicator active">
+                <span class="step-number">1</span>
+                <span>Organization</span>
+              </div>
+              <div class="step-indicator">
+                <span class="step-number">2</span>
+                <span>Requirements</span>
+              </div>
+              <div class="step-indicator">
+                <span class="step-number">3</span>
+                <span>Confirmation</span>
+              </div>
             </div>
-            <div class="form-group">
-              <label class="form-label" for="message">Message *</label>
-              <textarea id="message" class="form-textarea" placeholder="Tell me about your project..." required></textarea>
-              <span class="form-error">Message must be at least 10 characters</span>
+            
+            <!-- Step 1: Organization -->
+            <div class="form-step active" data-step="1">
+              <div class="form-group">
+                <label class="form-label" for="organization">Organization Name *</label>
+                <input type="text" id="organization" class="form-input" placeholder="Company / Entity Name" required>
+                <span class="form-error">Organization name is required</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Contact Person *</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="Full name" required>
+                <span class="form-error">Contact name is required</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Secure Email *</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="enterprise@domain.com" required>
+                <span class="form-error">Valid enterprise email required</span>
+              </div>
+              <div class="form-navigation">
+                <div></div>
+                <button type="button" class="btn btn-primary btn-next">Next: Requirements →</button>
+              </div>
             </div>
-            <button type="submit" class="form-submit">Send Message</button>
+            
+            <!-- Step 2: Requirements -->
+            <div class="form-step" data-step="2">
+              <div class="form-group">
+                <label class="form-label">Budget Range *</label>
+                <div class="radio-group">
+                  <div class="radio-card">
+                    <input type="radio" name="budget" id="budget-1" value="5k-15k">
+                    <label for="budget-1">$5K - $15K</label>
+                  </div>
+                  <div class="radio-card">
+                    <input type="radio" name="budget" id="budget-2" value="15k-30k">
+                    <label for="budget-2">$15K - $30K</label>
+                  </div>
+                  <div class="radio-card">
+                    <input type="radio" name="budget" id="budget-3" value="30k-50k">
+                    <label for="budget-3">$30K - $50K</label>
+                  </div>
+                  <div class="radio-card">
+                    <input type="radio" name="budget" id="budget-4" value="50k+">
+                    <label for="budget-4">$50K+</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="service-tier">Service Tier *</label>
+                <select id="service-tier" class="form-select" required>
+                  <option value="">Select Deployment Tier</option>
+                  <option value="core">Core - Essential Security Posture</option>
+                  <option value="enterprise">Enterprise - Full Infrastructure</option>
+                  <option value="custom">Custom - Tailored Architecture</option>
+                </select>
+                <span class="form-error">Service tier selection required</span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="project-details">Project Specifications</label>
+                <textarea id="project-details" class="form-textarea" placeholder="Describe technical requirements, compliance needs, timeline..."></textarea>
+              </div>
+              <div class="form-navigation">
+                <button type="button" class="btn btn-ghost btn-prev">← Previous</button>
+                <button type="button" class="btn btn-primary btn-next">Next: Confirm →</button>
+              </div>
+            </div>
+            
+            <!-- Step 3: Confirmation -->
+            <div class="form-step" data-step="3">
+              <div class="form-group">
+                <label class="form-label" for="timeline">Preferred Timeline</label>
+                <select id="timeline" class="form-select">
+                  <option value="immediate">Immediate Deployment</option>
+                  <option value="1-2months">1-2 Months</option>
+                  <option value="3-6months">3-6 Months</option>
+                  <option value="flexible">Flexible</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="referral">Referral Source</label>
+                <input type="text" id="referral" class="form-input" placeholder="How did you hear about us?">
+              </div>
+              <div class="form-group">
+                <div class="radio-card" style="margin-top: 1rem;">
+                  <input type="checkbox" id="nda-required">
+                  <label for="nda-required">Request NDA Protection</label>
+                </div>
+              </div>
+              <div class="form-navigation">
+                <button type="button" class="btn btn-ghost btn-prev">← Previous</button>
+                <button type="submit" class="form-submit">Submit Consultation Request</button>
+              </div>
+            </div>
           </form>
+          
           <div class="form-success">
             <div class="success-icon">✓</div>
-            <h3 class="success-title">Message Sent!</h3>
-            <p class="success-text">Thank you for reaching out. I'll get back to you within 24 hours.</p>
+            <h3 class="success-title">Request Received</h3>
+            <p class="success-text">Engagement ID: NX-2026-04-XXXX. Secure response within 4 hours.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <div class="project-meta-footer">
+    <div class="container project-meta-inner">
+      <div class="meta-item">
+        <span class="status-indicator"><span class="status-dot"></span></span>
+        <span class="meta-label">SYSTEM STATUS:</span>
+        <span class="meta-value">OPERATIONAL</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">PROJECT ID:</span>
+        <span class="meta-value">NX-2026-04</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">AUTH:</span>
+        <span class="meta-value">AES-256-GCM</span>
+      </div>
+    </div>
+  </div>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon">⚡</div>NEXUS</a><p>Crafting digital experiences.</p></div>
+        <div class="footer-brand"><a href="index.html" class="logo"><div class="logo-icon">⚡</div>NEXUS</a><p>Enterprise-grade digital infrastructure.</p></div>
         <div class="footer-col"><h4 class="footer-title">Quick Links</h4><ul class="footer-links"><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li></ul></div>
         <div class="footer-col"><h4 class="footer-title">Resources</h4><ul class="footer-links"><li><a href="blog.html">Blog</a></li><li><a href="pricing.html">Pricing</a></li></ul></div>
         <div class="footer-col"><h4 class="footer-title">Social</h4><ul class="footer-links"><li><a href="testimonial.html">Testimonials</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
       </div>
-      <div class="footer-bottom"><p class="footer-copyright">© 2026 NEXUS. All rights reserved.</p></div>
+      <div class="footer-bottom"><p class="footer-copyright">© 2026 NEXUS-Gen Solutions. All rights reserved.</p></div>
     </div>
   </footer>
   <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('consultation-form');
+      const steps = document.querySelectorAll('.form-step');
+      const stepIndicators = document.querySelectorAll('.step-indicator');
+      const progressBar = document.querySelector('.form-progress-bar');
+      const formSuccess = document.querySelector('.form-success');
+      let currentStep = 1;
+      
+      const nextBtns = document.querySelectorAll('.btn-next');
+      const prevBtns = document.querySelectorAll('.btn-prev');
+      
+      function updateProgress(step) {
+        const progress = (step / 3) * 100;
+        progressBar.style.width = progress + '%';
+        
+        stepIndicators.forEach((indicator, index) => {
+          indicator.classList.remove('active', 'completed');
+          if (index + 1 < step) {
+            indicator.classList.add('completed');
+          } else if (index + 1 === step) {
+            indicator.classList.add('active');
+          }
+        });
+      }
+      
+      function validateStep(step) {
+        let isValid = true;
+        const currentStepEl = document.querySelector(`.form-step[data-step="${step}"]`);
+        const requiredFields = currentStepEl.querySelectorAll('[required]');
+        
+        requiredFields.forEach(field => {
+          if (!field.value.trim()) {
+            field.classList.add('error');
+            const errorEl = field.parentElement.querySelector('.form-error');
+            if (errorEl) errorEl.classList.add('show');
+            isValid = false;
+          } else {
+            field.classList.remove('error');
+            const errorEl = field.parentElement.querySelector('.form-error');
+            if (errorEl) errorEl.classList.remove('show');
+          }
+        });
+        
+        if (step === 2) {
+          const budgetSelected = document.querySelector('input[name="budget"]:checked');
+          if (!budgetSelected) {
+            isValid = false;
+            const radioGroup = document.querySelector('.radio-group');
+            if (radioGroup) {
+              radioGroup.style.border = '1px solid #ff00aa';
+              setTimeout(() => radioGroup.style.border = 'none', 2000);
+            }
+          }
+        }
+        
+        return isValid;
+      }
+      
+      nextBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (validateStep(currentStep)) {
+            if (currentStep < 3) {
+              currentStep++;
+              steps.forEach(step => step.classList.remove('active'));
+              document.querySelector(`.form-step[data-step="${currentStep}"]`).classList.add('active');
+              updateProgress(currentStep);
+            }
+          }
+        });
+      });
+      
+      prevBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (currentStep > 1) {
+            currentStep--;
+            steps.forEach(step => step.classList.remove('active'));
+            document.querySelector(`.form-step[data-step="${currentStep}"]`).classList.add('active');
+            updateProgress(currentStep);
+          }
+        });
+      });
+      
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        if (validateStep(currentStep)) {
+          const formData = {
+            organization: document.getElementById('organization').value,
+            contactName: document.getElementById('contact-name').value,
+            email: document.getElementById('contact-email').value,
+            budget: document.querySelector('input[name="budget"]:checked')?.value,
+            serviceTier: document.getElementById('service-tier').value,
+            projectDetails: document.getElementById('project-details').value,
+            timeline: document.getElementById('timeline').value,
+            referral: document.getElementById('referral').value,
+            NDA: document.getElementById('nda-required').checked,
+            timestamp: new Date().toISOString()
+          };
+          
+          localStorage.setItem('consultationRequest', JSON.stringify(formData));
+          
+          form.style.display = 'none';
+          formSuccess.classList.add('show');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
