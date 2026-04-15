@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | NEXUS</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">⚡</div>
+        NEXUS
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link active">Portfolio</a>
+        <a href="testimonial.html" class="nav-link">Testimonials</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <button class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="portfolio-hero">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Portfolio</span>
+        <h1 class="section-title">Featured <span class="text-gradient">Work</span></h1>
+        <p class="section-description">
+          A showcase of my most impactful projects across various categories.
+        </p>
+      </div>
+      <div class="portfolio-filters reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="Web">Web</button>
+        <button class="filter-btn" data-filter="Design">Design</button>
+        <button class="filter-btn" data-filter="Security">Security</button>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item" data-category="Web" data-project="1">
+          <img src="https://picsum.photos/600/400?random=1" alt="E-Commerce Platform">
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Web Development</span>
+            <h3 class="portfolio-title">E-Commerce Platform</h3>
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">React</span>
+              <span class="portfolio-tag">Node.js</span>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="Web" data-project="2">
+          <img src="https://picsum.photos/600/400?random=2" alt="Analytics Dashboard">
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Web Development</span>
+            <h3 class="portfolio-title">Analytics Dashboard</h3>
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">Vue.js</span>
+              <span class="portfolio-tag">D3.js</span>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="Security" data-project="3">
+          <img src="https://picsum.photos/600/400?random=3" alt="Security Audit Tool">
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Security</span>
+            <h3 class="portfolio-title">Security Audit Tool</h3>
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">Go</span>
+              <span class="portfolio-tag">Python</span>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="Web" data-project="4">
+          <img src="https://picsum.photos/600/400?random=4" alt="AI Analytics Platform">
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Web Development</span>
+            <h3 class="portfolio-title">AI Analytics Platform</h3>
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">AI/ML</span>
+              <span class="portfolio-tag">TensorFlow</span>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="Design" data-project="5">
+          <img src="https://picsum.photos/600/400?random=5" alt="Mobile Banking App">
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">UI/UX Design</span>
+            <h3 class="portfolio-title">Mobile Banking App</h3>
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">Flutter</span>
+              <span class="portfolio-tag">Fintech</span>
+            </div>
+          </div>
+        </div>
+        <div class="portfolio-item" data-category="Design" data-project="6">
+          <img src="https://picsum.photos/600/400?random=6" alt="Brand Identity">
+          <div class="portfolio-overlay">
+            <span class="portfolio-category">Design</span>
+            <h3 class="portfolio-title">Brand Identity Design</h3>
+            <div class="portfolio-tags">
+              <span class="portfolio-tag">Branding</span>
+              <span class="portfolio-tag">Figma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal">
+    <div class="modal-backdrop"></div>
+    <div class="modal-content">
+      <button class="modal-close">×</button>
+      <div class="modal-image">
+        <img src="" alt="Project">
+      </div>
+      <div class="modal-body">
+        <span class="modal-category"></span>
+        <h2 class="modal-title"></h2>
+        <p class="modal-description"></p>
+        <div class="modal-meta">
+          <div class="meta-item">
+            <span class="meta-label">Client</span>
+            <span class="meta-value"></span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Year</span>
+            <span class="meta-value"></span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Technologies</span>
+            <span class="meta-value"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">⚡</div>
+            NEXUS
+          </a>
+          <p>Crafting digital experiences that inspire and transform.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-links">
+            <li>hello@nexus.dev</li>
+            <li>+1 (555) 123-4567</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2026 NEXUS. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 | NEXUS</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <header class="header" style="background: transparent;">
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><div class="logo-icon">⚡</div>NEXUS</a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="portfolio.html" class="nav-link">Portfolio</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <button class="mobile-menu-btn"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="error-page">
+    <div class="error-bg">
+      <canvas id="error-canvas"></canvas>
+    </div>
+    <div class="error-content">
+      <div class="error-cube"></div>
+      <h1>404</h1>
+      <h2><span class="text-gradient">Page Not Found</span></h2>
+      <p>The page you're looking for seems to have wandered into the digital void. Let's get you back on track.</p>
+      <a href="index.html" class="btn btn-primary">Return Home</a>
+    </div>
+  </section>
+
+  <script>
+    const canvas = document.getElementById('error-canvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    let particles = [];
+    for (let i = 0; i < 50; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 3 + 1,
+        speedX: (Math.random() - 0.5) * 2,
+        speedY: (Math.random() - 0.5) * 2,
+        color: Math.random() > 0.5 ? '#00f0ff' : '#ff00aa'
+      });
+    }
+    
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => {
+        p.x += p.speedX;
+        p.y += p.speedY;
+        if (p.x < 0 || p.x > canvas.width) p.speedX *= -1;
+        if (p.y < 0 || p.y > canvas.height) p.speedY *= -1;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = 0.5;
+        ctx.fill();
+        ctx.globalAlpha = 1;
+      });
+      requestAnimationFrame(animate);
+    }
+    animate();
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
