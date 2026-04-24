@@ -1,7 +1,7 @@
 # Nexus-Gen: Enterprise Web Framework
 
 ### Project Overview
-This is a comprehensive, 15-page full-stack-ready frontend architecture developed for **[Client Name or Brand]**. The goal was to push the boundaries of static web deployment by integrating high-end animations and complex routing using pure HTML, CSS, and Advanced JavaScript.
+This is a comprehensive, 15-page full-stack-ready frontend architecture developed for **Client sample website**. The goal was to push the boundaries of static web deployment by integrating high-end animations and complex routing using pure HTML, CSS, and Advanced JavaScript.
 
 ### Key Features
 * **15+ Unique Page Blueprints:** Including interactive Case Studies, Service Audits, and a Mock Client Portal.
@@ -15,4 +15,5 @@ This is a comprehensive, 15-page full-stack-ready frontend architecture develope
 * **Features:** LocalStorage Data Simulation, SVG Animation Engines.
 
 ---
-*Developed by [Your Name/Brand]*
+*Developed by [S M Shayan Uddin]*
+*Title: **Cyber Security Analyst | AI-Developer | Full-Stack Developer**
